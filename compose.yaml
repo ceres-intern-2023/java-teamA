@@ -1,0 +1,23 @@
+services:
+  mysql:
+    image: 'mysql:8.1.0'
+    environment:
+      - 'MYSQL_DATABASE=mydatabase'
+      - 'MYSQL_PASSWORD=secret'
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=myuser'
+    ports:
+      - 3306:3306
+  redis:
+    image: "redis:6.2.13"
+    ports:
+      - "6379:6379"
+  adminer:
+    container_name: adminer
+    hostname: adminer
+    image: adminer:4.8.1
+    restart: always
+    ports:
+      - 8000:8080
+    depends_on:
+      - mysql
