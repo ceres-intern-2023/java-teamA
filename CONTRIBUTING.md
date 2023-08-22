@@ -1,6 +1,4 @@
-基本的には　
-https://github.com/ceres-intern-2023/java-skelton
-のREADMEに従えば起動できます。
+基本的にはREADME.mdに従えば起動できます。
 
 ただローカルPC（各々のPC）で動作させることを前提にしているので以下のインストールが、各自必要になります。
 
