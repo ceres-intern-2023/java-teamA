@@ -104,7 +104,7 @@ userテーブルの作成と、サンプルデータが投入される。
 
 # サンプルプロジェクト動作確認TODO
 cloneしたサンプルプロジェクトが正しく動作するかの確認TODO。
-Java、Node、Docker等インストールされていない場合は、[CONTRIBUTING.md](https://github.com/ceres-intern-2023/java-skelton/blob/main/CONTRIBUTING.md)を参照ください。
+Java、Node、Docker等インストールされていない場合は、CONTRIBUTING.mdを参照ください。
 
 1. [ ] `./gradlew`でspring起動に必要なプラグインインストール
 2. [ ] springを起動させ、localhost:8080にアクセスできること
