@@ -46,7 +46,6 @@ Spring Boot3とNuxt.js3を用いたSPAによるサンプルアプリケーショ
 backend: http://localhost:8080
 
 ## Nuxt起動
-
 ```
 cd client/nuxt
 npm install
