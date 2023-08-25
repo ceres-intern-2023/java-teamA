@@ -21,7 +21,7 @@ export default function NewsList({ selectedNews, setSelectedNews }) {
         'SCIENCE': 6,
         'HEALTH': 7,
     };
-    
+
     const favicons = {
         'GENERAL': 'https://t2.gstatic.com/images?q=tbn:ANd9GcRf-C90lKnEGnkoAe2ZVEgewlsswvEDCYbSOoi6kbutRtyDso5h',
         'WORLD': 'https://rootsacademy.ma/wp-content/uploads/2022/05/cropped-favicon.png',
@@ -50,20 +50,20 @@ export default function NewsList({ selectedNews, setSelectedNews }) {
 
 
     return (
-        <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: 3}}>
+        <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: 3 }}>
             <div className='mainPage'>
                 <h2>ニュースカテゴリーを選択してください</h2>
                 <List dense sx={{ width: '100%', maxWidth: 1000, bgcolor: 'background.paper', textAlign: 'center' }}>
                     {newsItems.map((item, index) => (
                         <ListItem
-                        key={index}
-                        disablePadding
-                        sx={{
-                            boxShadow: selectedNews.includes(item) ? '0 0 0 2px #3f51b5' : 'none',
-                            marginTop: 0.1,
-                            backgroundColor: selectedNews.includes(item) ? '#f0f0f0' : 'transparent'
-                        }}
-                    >
+                            key={index}
+                            disablePadding
+                            sx={{
+                                boxShadow: selectedNews.includes(item) ? '0 0 0 2px #3f51b5' : 'none',
+                                marginTop: 0.1,
+                                backgroundColor: selectedNews.includes(item) ? '#f0f0f0' : 'transparent'
+                            }}
+                        >
                             <ListItemButton onClick={() => handleItemClick(item)}>
                                 <ListItemAvatar>
                                     <Avatar
@@ -86,7 +86,7 @@ export default function NewsList({ selectedNews, setSelectedNews }) {
                 </List>
                 <div className='submit-button'>
                     {/* <button onClick={() => setSelectedNews([])}>リセット</button> */}
-                    <button onClick={selectNewsInt}>ログに出す</button>
+                    {/* <button onClick={selectNewsInt}>ログに出す</button> */}
                 </div>
             </div>
         </Container>

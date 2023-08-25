@@ -9,12 +9,12 @@ function App() {
   const [selectedNews, setSelectedNews] = useState([]);
 
   return (
-      <div className="App">
-        <Header />
-        <NewsList selectedNews={selectedNews} setSelectedNews={setSelectedNews} />
-        <VoiceVoxIcons selectedNews={selectedNews} />
-        <ResPage />
-      </div>
+    <div className="App">
+      <Header />
+      <NewsList selectedNews={selectedNews} setSelectedNews={setSelectedNews} />
+      <VoiceVoxIcons selectedNews={selectedNews} />
+      {/* <ResPage /> */}
+    </div>
   );
 }
 
