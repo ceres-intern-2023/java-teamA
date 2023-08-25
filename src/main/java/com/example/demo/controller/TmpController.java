@@ -13,7 +13,7 @@ public class TmpController {
     @GetMapping("tmp")
     public String tmp() {
 
-        List<String> summaryTextList = List.of("a", "b", "c", "d", "e");
+        List<String> summaryTextList = List.of("a", "b", "c" );
 
         String result = IntStream.range(0, summaryTextList.size())
                 .mapToObj(i -> {
@@ -21,16 +21,16 @@ public class TmpController {
 
                     // 最初!!
                     if (i == 0) {
-                        return "first " + text;
+                        return "最初のニュースです, " + text;
                     }
 
                     // 最後
                     if (i == summaryTextList.size() - 1) {
-                        return "first " + text + " last";
+                        return "次のニュースです," + text + " これでニュースを終わります.";
                     }
 
                     // 中間
-                    return "middle " + text;
+                    return "次のニュースです, " + text;
                 }).reduce("", (x, y) -> x + y);
 
         return result;
