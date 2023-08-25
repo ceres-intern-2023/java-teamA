@@ -1,0 +1,33 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 75% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.res-page {
+    background: linear-gradient(250.6deg, #ffffff 7.3%, rgb(87, 141, 195) 98.63%);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite; 
+    
+    text-align: center;
+    position: relative; // 追加
+
+    .summarize-text {
+        width: 60%;
+        margin: 0 auto; // 中央に配置
+        overflow-wrap: break-word; // 単語が途中で折り返さないようにする
+    }
+
+    .read-button {
+        position: absolute; // 絶対位置指定
+        top: 50%; // 上から50%の位置
+        right: 5%; // 右から2%の位置
+        transform: translateY(-50%); // ボタンの高さの半分だけ上にずらす
+    }
+}
