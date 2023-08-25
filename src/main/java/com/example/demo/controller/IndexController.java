@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import java.net.URL;
 import java.util.*;
+import java.util.stream.IntStream;
 
 @RequestMapping("/api")
 @RestController
@@ -60,11 +61,25 @@ public class IndexController {
             summaryTexts.add(getSummaryText(text));
         }
 
-        System.out.println(ArrayUtils.toString(summaryTexts));
+        String result = IntStream.range(0, summaryTexts.size())
+                .mapToObj(i -> {
+                    String text = summaryTexts.get(i);
 
-        //TODO: 要約された文章を結合し，返す．
+                    // 最初!!
+                    if (i == 0) {
+                        return "first " + text;
+                    }
 
-        return "POST /api/news";
+                    // 最後
+                    if (i == summaryTexts.size() - 1) {
+                        return "first " + text + " last";
+                    }
+
+                    // 中間
+                    return "middle " + text;
+                }).reduce("", (x, y) -> x + y);
+
+        return result;
     }
 
     public String getSummaryText(String rawArticle) {
