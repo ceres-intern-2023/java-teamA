@@ -67,16 +67,16 @@ public class IndexController {
 
                     // 最初!!
                     if (i == 0) {
-                        return "first " + text;
+                        return "最初のニュースです, " + text+ "\n";
                     }
 
                     // 最後
                     if (i == summaryTexts.size() - 1) {
-                        return "first " + text + " last";
+                        return "次のニュースです," + text + " これでニュースを終わります.";
                     }
 
                     // 中間
-                    return "middle " + text;
+                    return "次のニュースです, " + text+ "\n";
                 }).reduce("", (x, y) -> x + y);
 
         return result;
