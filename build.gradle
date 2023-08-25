@@ -34,6 +34,10 @@ dependencies {
 	implementation 'org.flywaydb:flyway-mysql'
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.springframework.session:spring-session-data-redis'
+	implementation 'com.rometools:rome:2.1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly "org.projectlombok:lombok"
 	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
