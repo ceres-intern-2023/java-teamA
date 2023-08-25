@@ -21,7 +21,7 @@ public class TmpController {
 
                     // 最初!!
                     if (i == 0) {
-                        return "最初のニュースです, " + text;
+                        return "最初のニュースです, " + text+ "\n";
                     }
 
                     // 最後
@@ -30,7 +30,7 @@ public class TmpController {
                     }
 
                     // 中間
-                    return "次のニュースです, " + text;
+                    return "次のニュースです, " + text+ "\n";
                 }).reduce("", (x, y) -> x + y);
 
         return result;
