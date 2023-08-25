@@ -1,0 +1,44 @@
+.icons {
+    text-align: center;
+    p {
+      font-size: 1rem;
+      margin-bottom: 1em;
+    }
+    img {
+      cursor: pointer; // カーソルをポインタに変更
+      width: 60px; // アイコンサイズ調整
+      height: 60px; // アイコンサイズ調整
+      margin: 0 10px; // 左右の間隔調整
+      border: 3px solid transparent; // 初期状態では透明の枠
+      transition: border-color 0.3s ease; // 枠の色の変更にトランジション効果を追加
+
+      &.selected {
+        border-color: rgb(24,118,210); // 選択された画像の枠色
+      }
+    }
+    .summarize-button {
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;// ボタンのトランジションに box-shadow を追加
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 2rem;// ボタンのパディングを調整
+      font-size: 1.2rem;// ボタンのフォントサイズを調整
+      background-color: rgb(24,118,210);
+      // text-shadow: 1px 1px 0 #c3576f, -1px -1px 0 #c3576f;
+      box-shadow: 0 10px 0 0 #030588;
+      color: rgb(255, 228, 228);
+      font-weight: bold;
+      border: 1px solid #7d7d7a;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &:hover {
+        background-color: rgb(24,118,210);
+        // text-shadow: 1px 1px 0 #944354, -1px -1px 0 #c3576f;
+        transform: translateY(10px);// ホバー時にテキストを下に移動
+        box-shadow: none;
+      }
+    }
+  }
