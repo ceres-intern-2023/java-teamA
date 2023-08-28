@@ -36,6 +36,7 @@ public class SpringSecurityConfig {
 
     private static final String[] PUBLIC_ENDPOINTS = {
             "/",
+            "/api/**",
             "/sample/**",
     };
 

@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### React ###
+node_modules/
+.DS_Store
